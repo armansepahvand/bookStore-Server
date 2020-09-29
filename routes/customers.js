@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
 
   let customer = new Customer({
     name: req.body.name,
-    isGold: req.body.isGold,
+    email: req.body.email,
     phone: req.body.phone,
   });
   customer = await customer.save();
@@ -30,7 +30,7 @@ router.put("/:id", async (req, res) => {
     req.params.id,
     {
       name: req.body.name,
-      isGold: req.body.isGold,
+      email: req.body.email,
       phone: req.body.phone,
     },
     { new: true }
