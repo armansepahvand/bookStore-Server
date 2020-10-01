@@ -5,6 +5,7 @@ const genres = require("./routes/genres");
 const customers = require("./routes/customers");
 const books = require("./routes/books");
 const solds = require("./routes/solds");
+const users = require("./routes/users");
 const express = require("express");
 const app = express();
 
@@ -18,6 +19,7 @@ app.use("/api/genres", genres);
 app.use("/api/customers", customers);
 app.use("/api/books", books);
 app.use("/api/solds", solds);
+app.use("/api/users", users);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
